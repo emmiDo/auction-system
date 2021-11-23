@@ -1,0 +1,85 @@
+<html xmlns="http://thymeleaf.org">
+
+<head>
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" type="text/css"></link>
+    <link th:href="@{/css/layout.css}" rel="stylesheet" type="text/css"></link>
+</head>
+
+<body>
+    <div class="container">
+        <form class="form-horizontal" th:object="${item}" th:action="@{/item}" method="post">
+            <fieldset>
+
+                <!-- Form Name -->
+                <legend>Post your item</legend>
+
+                <!-- Auctioneer name input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="owner">Your name</label>
+                    <div class="col-md-4">
+                        <input id="owner" name="owner" type="text"
+                               placeholder="Your name" class="form-control input-md"
+                               required=""  th:field="*{owner}"/>
+                    </div>
+                </div>
+
+                <!-- Item name input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="item_name">Item name</label>
+                    <div class="col-md-4">
+                        <input id="item_name" name="item_name" type="text"
+                               placeholder="Item name" class="form-control input-md"
+                               required=""  th:field="*{name}"/>
+                    </div>
+                </div>
+
+                <!-- Price input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="price">Price</label>
+                    <div class="col-md-4">
+                        <input id="price" name="price" type="text"
+                               placeholder="Price" class="form-control input-md"
+                               required=""  th:field="*{price}"/>
+                    </div>
+                </div>
+
+                <!-- Start time -->
+<!--                <div class="form-group">-->
+<!--                    <label class="col-md-4 control-label" for="start_time">Start time</label>-->
+<!--                    <div class="col-md-4">-->
+<!--                        <input id="start_time" name="start_time" type="text"-->
+<!--                               placeholder="Start time" class="form-control" required="" />-->
+<!--                    </div>-->
+<!--                    <script type="text/javascript">-->
+<!--                         $(function () {-->
+<!--                             $('#start_time').datetimepicker();-->
+<!--                         });-->
+<!--                    </script>-->
+<!--                </div>-->
+
+<!--                &lt;!&ndash; End time &ndash;&gt;-->
+<!--                <div class="form-group">-->
+<!--                    <label class="col-md-4 control-label" for="end_time">End time</label>-->
+<!--                    <div class="col-md-4">-->
+<!--                        <input id="end_time" name="end_time" type="text"-->
+<!--                               placeholder="End time" class="form-control" required="" />-->
+<!--                    </div>-->
+<!--                </div>-->
+
+                <!-- Button -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="submit"></label>
+                    <div class="col-md-4">
+                        <button id="submit" name="submit" class="btn btn-primary btn">Post</button>
+                    </div>
+                </div>
+
+            </fieldset>
+        </form>
+
+        <script type="text/javascript" th:src="@{/js/jquery-3.1.0.min.js}"></script>
+        <script type="text/javascript" th:src="@{/js/bootstrap.min.js}"></script>
+    </div>
+</body>
+
+</html>

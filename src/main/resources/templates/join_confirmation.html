@@ -1,0 +1,40 @@
+<html xmlns="http://thymeleaf.org">
+
+<head>
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" type="text/css"></link>
+    <link th:href="@{/css/layout.css}" rel="stylesheet" type="text/css"></link>
+</head>
+
+<body>
+<div class="container">
+    <form class="form-horizontal" th:action="${url}">
+        <fieldset>
+
+            <!-- Form Name -->
+            <legend>Confirmation</legend>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label">Your name:</label>
+                <div class="col-md-4">
+                    <p class="form-control-static" th:text="${bidder.name}">Name</p>
+                </div>
+            </div>
+
+            <!-- Button -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="submit"></label>
+                <div class="col-md-4">
+                    <button id="submit" name="submit" class="btn btn-primary btn">OK</button>
+                </div>
+            </div>
+
+        </fieldset>
+    </form>
+
+    <script type="text/javascript" th:src="@{/js/jquery-3.1.0.min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/bootstrap.min.js}"></script>
+</div>
+</body>
+
+</html>

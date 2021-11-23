@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" type="text/css"></link>
+	<link th:href="@{/css/layout.css}" rel="stylesheet" type="text/css"></link>
+</head>
+<body>
+<div class="container">
+	<form class="form-horizontal" action = "/item_list">
+		<fieldset>
+
+			<!-- Form Name -->
+			<legend>You are a buyer</legend>
+
+			<!-- Button -->
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="buyer"></label>
+				<div class="col-md-4">
+					<button id="buyer" onclick="buyer" class="btn btn-primary btn">Buy</button>
+				</div>
+			</div>
+
+		</fieldset>
+	</form>
+
+	<form class="form-horizontal" action = "/post_item">
+		<fieldset>
+
+			<!-- Form Name -->
+			<legend>You are an auctioneer</legend>
+
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="auctioneer"></label>
+				<div class="col-md-4">
+					<button id="auctioneer" onclick="auctioneer" class="btn btn-primary btn">Call Auction</button>
+				</div>
+			</div>
+
+		</fieldset>
+	</form>
+	<script type="text/javascript" th:src="@{/js/jquery-3.1.0.min.js}"></script>
+	<script type="text/javascript" th:src="@{/js/bootstrap.min.js}"></script>
+</div>
+</body>
+</html>
